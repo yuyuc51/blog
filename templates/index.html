@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/blog.css">
+    <script src="/static/js/jquery.min.js"></script>
+</head>
+<body>
+    <!-- 内嵌导航栏模板文件 -->
+    {% include 'header.html' %}
+    <!---->
+    <div id="layer1">
+        <div class="lleft">
+            <span id="imgleft">&lsaquo;</span>
+            <img width="752" height="452" src="/static/images/banner01.jpg" id="img" alt="">
+            <span id="imgright">&rsaquo;</span>
+            <p>爬虫微课5小时Python学习路线</p>
+
+        </div>
+        {% import 'macros.html' as index_macro %}
+        <div class="lright">
+            {{ index_macro.index_imgad('linux','/static/images/toppic01.jpg','linux升级为p3和安装pip,svn的方法') }}
+            {{ index_macro.index_imgad('Python','/static/images/toppic02.jpg','精通Python编程,深入浅出教程') }}
+
+        </div>
+
+    </div>
+
+
+    <script src="/static/js/index.js"></script>
+</body>
+</html>
